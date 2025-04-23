@@ -1,28 +1,31 @@
 # 💬 Cybersecurity Chatbot
 
-A C# console chatbot that teaches basic cybersecurity principles using a fun and interactive interface. Built with .NET 8.0, this chatbot features a voice greeting, ASCII branding, personalized interaction, and automated GitHub Actions integration.
+A C# console chatbot that teaches basic cybersecurity principles using a fun and interactive interface. Built using the .NET Framework, this chatbot features a computer-generated voice greeting, ASCII visual header, personalised responses, and full GitHub CI integration.
 
 ---
 
 ## 🛠 Features
 
-- ✅ **Text-to-Speech Introduction** using Windows COM Speech (SpVoice)
-- ✅ **ASCII Art Banner** to enhance user experience
-- ✅ **Personalized User Greeting**
-- ✅ **Topic-Specific Responses** (phishing, password safety, secure browsing)
-- ✅ **Input Validation** with fallback messages
-- ✅ **Clean Console UI** using color formatting
-- ✅ **CI/CD Integration** via GitHub Actions
+- ✅ **Voice Greeting** with computer-generated speech using COM (`SpVoice`)
+- ✅ **ASCII Art Banner** at launch to enhance console visuals
+- ✅ **User Interaction** with name input and personalised messages
+- ✅ **Basic Cybersecurity Responses** (password safety, phishing, secure browsing)
+- ✅ **Input Validation** to catch and guide invalid user input
+- ✅ **Console UI Styling** using text formatting and structure
+- ✅ **CI Integration** via GitHub Actions and MSBuild (.NET Framework compatible)
 
 ---
 
 ## 🚀 How to Run the Chatbot
 
-> Prerequisites:
-- Windows OS with COM Speech API enabled
-- [.NET 8 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+### 🔧 Requirements:
 
-### 🧪 Steps:
+- Windows OS (COM Speech support enabled)
+- [.NET SDK (v8.0)](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+- Git (for cloning the repo)
+
+### ▶️ Run Steps:
+
 ```bash
 git clone https://github.com/ST10433999/CybersecurityChatbot.git
 cd CybersecurityChatbot
