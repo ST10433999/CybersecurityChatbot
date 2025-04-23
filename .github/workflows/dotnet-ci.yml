@@ -1,4 +1,4 @@
-name: .NET Build & Check
+name: .NET Framework Build & Check
 
 on:
   push:
@@ -11,19 +11,14 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.x'  # Use '9.0.x' if your project targets .NET 9
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
 
-    - name: Restore dependencies
-      run: dotnet restore
+    - name: Build solution with MSBuild
+      run: msbuild CybersecurityChatbot.sln /p:Configuration=Release
 
-    - name: Build project
-      run: dotnet build --no-restore --configuration Release
-
-    - name: Check formatting (non-blocking)
-      run: dotnet format --verify-no-changes || echo "Formatting issues found"
+    - name: Check formatting (optional)
+      run: echo "Skipping dotnet format due to .NET Framework project."
